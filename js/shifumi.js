@@ -20,14 +20,13 @@ function shifumi(valeur) {
     valeurJoueur = valeur;
     valeurRobot = genererValeurRobot()
 
-    joueurSpan.textContent = valeurJoueur
-    robotSpan.textContent = valeurRobot
-
     if (valeurJoueur == valeurRobot)
         resultat = "Égalité !"
     else
         resultat = VALEURS_POSSIBLES.indexOf(valeurJoueur) == (VALEURS_POSSIBLES.indexOf(valeurRobot) + 1) % 3 ? "Gagné !" : "Perdu !"
-        
+
+    joueurSpan.textContent = valeurJoueur
+    robotSpan.textContent = valeurRobot
     resultatSpan.textContent = resultat
 }
 
